@@ -62,10 +62,10 @@
 
 			echo '<li>
 
-				<a href="clientes">
+				<a href="codigoQR">
 
 					<i class="fa fa-users"></i>
-					<span>Clientes</span>
+					<span>Generar Codigo QR</span>
 
 				</a>
 
