@@ -134,7 +134,7 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"]="ok"){
           $_GET["ruta"] == "usuarios" ||
           $_GET["ruta"] == "categorias" ||
           $_GET["ruta"] == "productos" ||
-          $_GET["ruta"] == "codigoQR" ||
+          $_GET["ruta"] == "generarCodigoQR" ||
           $_GET["ruta"] == "proveedores" ||
           $_GET["ruta"] == "ventas" ||
           $_GET["ruta"] == "crear-ventas" ||

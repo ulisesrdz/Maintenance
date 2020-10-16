@@ -62,7 +62,7 @@
 
 			echo '<li>
 
-				<a href="codigoQR">
+				<a href="generarCodigoQR">
 
 					<i class="fa fa-users"></i>
 					<span>Generar Codigo QR</span>
