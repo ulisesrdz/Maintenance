@@ -130,19 +130,11 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"]="ok"){
 
     if (isset($_GET["ruta"])) {
         
-      if ($_GET["ruta"] == "inicio" ||
+      if (
           $_GET["ruta"] == "usuarios" ||
-          $_GET["ruta"] == "categorias" ||
-          $_GET["ruta"] == "productos" ||
+          $_GET["ruta"] == "categorias" ||         
           $_GET["ruta"] == "generarCodigoQR" ||
-          $_GET["ruta"] == "proveedores" ||
-          $_GET["ruta"] == "ventas" ||
-          $_GET["ruta"] == "crear-ventas" ||
-          $_GET["ruta"] == "crear-compras" ||
-          $_GET["ruta"] == "crear-ordencompra" ||
-          $_GET["ruta"] == "compras" ||
-          $_GET["ruta"] == "editar-ventas" ||
-          $_GET["ruta"] == "reportes"||
+          $_GET["ruta"] == "maquinas" ||          
           $_GET["ruta"] == "salir" ) {
         include "modulos/".$_GET["ruta"].".php";
       }
@@ -151,7 +143,7 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"]="ok"){
       }
     }
     else{
-      include "modulos/inicio.php";
+      include "modulos/usuarios.php";
     }
 
 
@@ -179,6 +171,7 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"]="ok"){
 <script src="vistas/js/proveedores.js"></script>
 <script src="vistas/js/ventas.js"></script>
 <script src="vistas/js/compras.js"></script>
+<script src="vistas/js/codigoQR.js"></script>
 <script src="vistas/js/reportes.js"></script>
 </body>
 </html>

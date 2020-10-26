@@ -744,6 +744,14 @@ $(".tablas").on("click", ".btnImprimirFacturaCompra", function(){
 
 })
 
+$(".tablas").on("click", ".btnImprimirCodigo", function(){
+
+	//var codigoCompra = $(this).attr("codigoCompra");
+	console.log("respuesta",'hola');
+	window.open("extensiones/tcpdf/pdf/testPDF.php","_blanck");
+
+})
+
 /*=============================================
 RANGO DE FECHAS
 =============================================*/
