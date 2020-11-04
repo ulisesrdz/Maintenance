@@ -43,6 +43,7 @@
            <th style="width:10px">#</th>
            <th>Num Maquina</th>
            <th>Descripcion Maquina</th>
+           <th>Modelo</th>
            <th>Acciones</th>
 
          </tr> 
@@ -66,14 +67,15 @@
 
                     <td class="text-uppercase">'.$value["numMaquina"].'</td>
                     <td class="text-uppercase">'.$value["descripcion"].'</td>
+                    <td class="text-uppercase">'.$value["modelo"].'</td>
 
                     <td>
 
                       <div class="btn-group">
                           
-                        <button class="btn btn-warning btnEditarCategoria" idMaquina="'.$value["idMaquina"].'" data-toggle="modal" data-target="#modalEditarCategoria"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-warning btnEditarMaquina" idMaquina="'.$value["idMaquina"].'" data-toggle="modal" data-target="#modalEditarMaquinas"><i class="fa fa-pencil"></i></button>
 
-                        <button class="btn btn-danger btnEliminarCategoria" idMaquina="'.$value["idMaquina"].'"><i class="fa fa-times"></i></button>
+                        <button class="btn btn-danger btnEliminarMaquina" idMaquina="'.$value["idMaquina"].'"><i class="fa fa-times"></i></button>
 
                       </div>  
 
@@ -97,7 +99,7 @@
 </div>
 
 <!--=====================================
-MODAL AGREGAR CATEGORÍA
+MODAL AGREGAR MAQUINA
 ======================================-->
 
 <div id="modalAgregarMaquinas" class="modal fade" role="dialog">
@@ -181,10 +183,10 @@ MODAL AGREGAR CATEGORÍA
 </div>
 
 <!--=====================================
-MODAL EDITAR CATEGORÍA
+MODAL EDITAR MAQUINA
 ======================================-->
 
-<div id="modalEditarCategoria" class="modal fade" role="dialog">
+<div id="modalEditarMaquinas" class="modal fade" role="dialog">
   
   <div class="modal-dialog">
 
@@ -200,7 +202,7 @@ MODAL EDITAR CATEGORÍA
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Editar categoría</h4>
+          <h4 class="modal-title">Editar Maquinas</h4>
 
         </div>
 
@@ -220,14 +222,31 @@ MODAL EDITAR CATEGORÍA
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="editarCategoria" id="editarCategoria" required>
+                <input type="text" class="form-control input-lg" name="editarNumMaquina" id="editarNumMaquina" required>
 
-                 <input type="hidden"  name="idCategoria" id="idCategoria" required>
+                 <input type="hidden" id="idMaquina" name="idMaquina">
 
               </div>
 
             </div>
   
+            <!-- ENTRADA PARA EL NOMBRE -->
+            
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="editarDescripcion" id="editarDescripcion" required>
+
+                 
+
+              </div>
+
+            </div>
+  
+
           </div>
 
         </div>
@@ -246,23 +265,23 @@ MODAL EDITAR CATEGORÍA
 
       <?php
 
-          $editarCategoria = new ControladorCategorias();
-          $editarCategoria -> ctrEditarCategoria();
+          $editarMaquina = new ControladorMaquinas();
+          $editarMaquina -> ctrEditarMaquinas();
 
         ?> 
 
       </form>
 
-    </div>
-
   </div>
+
+    </div>
 
 </div>
 
 <?php
 
-  $borrarCategoria = new ControladorCategorias();
-  $borrarCategoria -> ctrBorrarCategoria();
+  $borrarMaquina = new ControladorMaquinas();
+  $borrarMaquina -> ctrBorrarMaquinas();
 
 ?>
 

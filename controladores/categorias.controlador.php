@@ -105,7 +105,7 @@ Ingreso de Categoria
 
 				$datos= array("categoria"=>$_POST["editarCategoria"],"id"=>$_POST["idCategoria"]);
 
-				$respuesta = ModeloCategorias::mdlEditarCategorias($tabla, $datos);
+				$respuesta = ModeloCategorias::mdlEditarInforme($tabla, $datos);
 
 				if($respuesta == "ok"){
 
@@ -202,6 +202,8 @@ Ingreso de Categoria
 
 					</script>';
 					}
+
+					
 		}
 	}
 

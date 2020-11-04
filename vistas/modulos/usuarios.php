@@ -128,8 +128,8 @@
   <div class="modal-dialog">
     <div class="modal-content">
 
-<!--Formulario-->
-<form role="form" method="post" enctype="multipart/form-data">
+
+        <form role="form" method="post" enctype="multipart/form-data">
 
       <!--=====================================
                   CABEZA DEL MODAL
@@ -224,7 +224,7 @@
 
         ?>
 
-    </form>
+        </form>
     </div>
   </div>
 </div>

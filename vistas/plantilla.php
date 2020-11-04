@@ -135,6 +135,8 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"]="ok"){
           $_GET["ruta"] == "categorias" ||         
           $_GET["ruta"] == "generarCodigoQR" ||
           $_GET["ruta"] == "maquinas" ||          
+          $_GET["ruta"] == "mantenimiento" || 
+          $_GET["ruta"] == "task" || 
           $_GET["ruta"] == "salir" ) {
         include "modulos/".$_GET["ruta"].".php";
       }
@@ -172,6 +174,8 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"]="ok"){
 <script src="vistas/js/ventas.js"></script>
 <script src="vistas/js/compras.js"></script>
 <script src="vistas/js/codigoQR.js"></script>
+<script src="vistas/js/maquinas.js"></script>
+<script src="vistas/js/tareas.js"></script>
 <script src="vistas/js/reportes.js"></script>
 </body>
 </html>
